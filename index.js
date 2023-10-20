@@ -1,4 +1,4 @@
-import { createTransport, createTestAccount } from "nodemailer";
+const { createTransport, createTestAccount } = require("nodemailer");
 require('dotenv').config();
 
 function sendMailUsingTestAccount() {
@@ -25,7 +25,7 @@ function sendMailUsingTestAccount() {
             text: `Hello, from ${account.user}, that's a simple email test.`,
             html: `<h1>Hello,</h1> from ${account.user}, that's a simple email <b>test</b>.`,
         });
-        console.log(`[LOG] Info about mail sent \n${info}`);
+        console.log(`[LOG] Info about mail sent \n${info.messageId}`);
     });
 }
 
@@ -50,5 +50,5 @@ function sendMailUsingGmail() {
 }
 
 sendMailUsingTestAccount();
-// sendMailUsingGmail();
+sendMailUsingGmail();
 
