@@ -1,0 +1,15 @@
+{
+  "name": "mailer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Kodex",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "nodemailer": "^6.9.6"
+  }
+}
